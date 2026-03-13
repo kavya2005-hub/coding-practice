@@ -1,20 +1,18 @@
-import java.io.*;
 import java.util.*;
 
 class TestClass {
-    public static void main(String args[]) throws Exception {
+    public static void main(String args[]) {
 
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        int t = Integer.parseInt(br.readLine().trim());
+        Scanner sc = new Scanner(System.in);
+        int t = sc.nextInt();
 
         while(t-- > 0){
 
-            int n = Integer.parseInt(br.readLine().trim());
-            String[] s = br.readLine().split(" ");
-
+            int n = sc.nextInt();
             int[] arr = new int[n];
+
             for(int i=0;i<n;i++){
-                arr[i] = Integer.parseInt(s[i]);
+                arr[i] = sc.nextInt();
             }
 
             int minLen = n + 1;
@@ -60,5 +58,7 @@ class TestClass {
                 System.out.println(minLen + " " + count);
             }
         }
+
+        sc.close();
     }
 }
