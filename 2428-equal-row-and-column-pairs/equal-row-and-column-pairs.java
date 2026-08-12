@@ -1,6 +1,8 @@
+import java.util.HashMap;
+
 class Solution {
     public int equalPairs(int[][] grid) {
-        Map<String,Integer> map=new HashMap<>();
+        HashMap<String,Integer> map=new HashMap<>();
         int count=0;
         for(int i=0;i<grid.length;i++)
         {
@@ -12,7 +14,7 @@ class Solution {
 
             }
             String row = sb.toString();
-map.put(row, map.getOrDefault(row, 0) + 1);
+           map.put(row, map.getOrDefault(row, 0) + 1);
         }
         for(int i=0;i<grid.length;i++)
         {
